@@ -1,0 +1,40 @@
+{
+	"application": {
+		"name": "SynthProject",
+		"vhostPath": "app/apache/vhost.conf"
+	},
+	"apache": {
+		"vhostPath": "/etc/apache2/sites-enabled"
+	},
+	"site": {
+		"path": "web"
+	},
+	"scm": {
+		"type": "git",
+		"url": "git@github.com:dmno/synth-maiden.git",
+		"deploymentBranch" : "master"
+	},
+	"development": {
+		"domain": "synthproject.synthmedia.co.uk",
+		"path": "/var/application/Project/Path",
+		"host": "localhost",
+		"sshPort": "22",
+		"ipAddress": "*",
+		"user": "webman",
+		"debugMode": true,
+		"memcache": {
+			"host": "localhost"
+		}
+	},
+	"production": {
+		"domain": "synthproject.co.uk",
+		"path": "/var/application/Project/Path",
+		"host": "live.server.com",
+		"sshPort": "22",
+		"ipAddress": "123.123.123.123",
+		"user": "webman",
+		"memcache": {
+			"host": "localhost"
+		}
+	}	
+}
